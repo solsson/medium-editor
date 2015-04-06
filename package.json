@@ -1,5 +1,5 @@
 {
-  "name": "medium-editor",
+  "name": "medium-editor-webpack",
   "version": "4.2.0",
   "author": "Davi Ferreira <hi@daviferreira.com>",
   "contributors": [
@@ -55,11 +55,13 @@
     "grunt-template-jasmine-istanbul": "~0.3.3",
     "jshint-stylish": "^1.0.1",
     "load-grunt-tasks": "^3.1.0",
-    "time-grunt": "^1.0.0"
+    "time-grunt": "^1.0.0",
+    "webpack": "^1.7.3"
   },
   "scripts": {
+    "prepublish": "./node_modules/.bin/grunt webpack",
     "test": "./node_modules/.bin/grunt test --verbose",
     "test:ci": "./node_modules/.bin/grunt travis --verbose",
-    "start": "open ./demo/index.html"
+    "start": "./node_modules/.bin/webpack && open ./demo/index.html"
   }
 }

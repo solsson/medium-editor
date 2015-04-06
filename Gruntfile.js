@@ -297,6 +297,7 @@ module.exports = function (grunt) {
     grunt.registerTask('js', ['jshint', 'concat', 'jasmine:suite', 'uglify']);
     grunt.registerTask('css', ['sass', 'autoprefixer', 'cssmin', 'csslint']);
     grunt.registerTask('default', ['js', 'css']);
+    grunt.registerTask('webpack', ['jshint', 'concat', 'jasmine:suite', 'sass', 'autoprefixer']);
 
     grunt.registerTask('spec', 'Runs a task on a specified file', function (taskName, fileName) {
         globalConfig.file = fileName;
